@@ -1,0 +1,9 @@
+{
+    "name": "backeats/order-kiosk",
+    "autoload": {
+        "psr-4": {
+            "Kiosk\\": "src/"
+        }
+    },
+    "require": {}
+}

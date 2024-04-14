@@ -1,0 +1,9 @@
+{
+    "name": "backeats/client",
+    "autoload": {
+        "psr-4": {
+            "Client\\": "src/"
+        }
+    },
+    "require": {}
+}
