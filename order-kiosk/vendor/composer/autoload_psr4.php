@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Backeats\\' => array($baseDir . '/src'),
+    'Kiosk\\' => array($baseDir . '/src'),
 );

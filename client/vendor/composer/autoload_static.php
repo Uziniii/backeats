@@ -7,14 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit581f9821693d1be4fd101f8f03f9949e
 {
     public static $prefixLengthsPsr4 = array (
-        'B' => 
+        'C' => 
         array (
-            'Backeats\\' => 9,
+            'Client\\' => 7,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Backeats\\' => 
+        'Client\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
