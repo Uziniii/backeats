@@ -8,13 +8,19 @@
             <nav>
                 <ul class="list-none text-white flex gap-6 text-lg ">
                     <li class="transition hover:cursor-pointer hover:scale-110">
-                        <p>Qui sommes nous ?</p>
+                        <p>
+                            Qui sommes nous ?
+                        </p>
                     </li>
                     <li class="transition hover:cursor-pointer hover:scale-110">
-                        <p>Nous contacter</p>
+                        <p>
+                            Nous contacter
+                        </p>
                     </li>
                     <li class="transition hover:cursor-pointer hover:scale-110">
-                        <p>Espace restaurateur</p>
+                        <p>
+                            Espace restaurateur
+                        </p>
                     </li>
                 </ul>
             </nav>
@@ -67,10 +73,15 @@
                 </div>
                 <div id="article-image" class="bg-[url('../../public/assets/imageCss/mcdonalds-backeats.png')] bg-cover bg-center w-[40rem] h-[22rem] rounded-xl"></div>
             </article>
-
         </div>
     </main>
-    <footer>
+    <footer class="w-full h-[50rem] bg-lightblack flex flex-col justify-around items-center text-white">
+        <h2 class="text-center font-bold text-3xl">
+            Ils nous font confiance
+        </h2>
+        <div>
+
+        </div>
 
     </footer>
 </body>
