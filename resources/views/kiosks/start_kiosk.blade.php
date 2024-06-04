@@ -3,7 +3,9 @@
 </head>
 <body class="h-[100vh]">  
     <main style="background-image: url({{asset("/backgroundKiosk.png")}})" id="backgroundKiosk" class="bg-cover flex bg-repeat h-[100vh]">
-        <!-- <div class="flex flex-col justify-center w-full">
+        
+    
+        <div style="background-image: url({{asset("/backgroundKiosk.png")}})" class="flex flex-col h-full  justify-center w-full absolute bg-cover flex bg-repeat">
             <div class="h-[60%] w-full flex items-end justify-center">
                 <img class="w-[750px] h-[750px] mb-[3vh]" src="{{asset("assets/img/kiosk/Burger-king-logo-1 1.png")}}" alt="logo du restaurant">
             </div>
@@ -11,7 +13,9 @@
             <div class="h-[40%] flex items-end justify-center w-full">
                 <a href="/" class=" bg-[#966C4D]  text-white mb-[5vh] pt-[80px] pb-[80px] w-[85vw] text-center rounded-3xl text-[90px] font-bold color-white">Commencer</a>
             </div>
-        </div> -->
+        </div>
+
+
         <div class="w-[70%] h-full p-[30px]">
             <div class="w-full h-[30%]">
                 <div>
