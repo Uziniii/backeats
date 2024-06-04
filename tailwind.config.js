@@ -7,10 +7,14 @@ export default {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        './resources/views/kiosks/*.blade.php',
     ],
 
     theme: {
         extend: {
+            backgroundImage: {
+                'kioskBackground': "url('')",
+              },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
