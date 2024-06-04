@@ -24,22 +24,6 @@ export default {
                 white : "#FFFFFF",
                 lightblue : "#2BA6FF",
             },  
-            animation: {
-                showline: "0.23s ease-in-out 0.1s 1 linear both openLine",
-            },  
-            keyframes: {
-                openLine: {
-                    "0%": {
-                        width: "0.2vw",
-                    },
-                    "50%": {
-                        width: "5.8vw",
-                    },
-                    "100%": {
-                        width: "10vw",
-                    },
-                },
-            },
         },
     },
 
