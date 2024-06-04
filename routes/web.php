@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\KioskController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,5 +16,7 @@ Route::view('dashboard', 'dashboard')
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');  
+
+Route::get('/home', [UserController::class, 'index'])->name('user.index');
 
 require __DIR__.'/auth.php';
