@@ -27,7 +27,7 @@
         </div>
     </header>
     <main>
-        <div id="hero-banner" class="bg-[url('../../public/assets/imageCss/hero-banner-backeats.png')] bg-center bg-no-repeat bg-cover w-screen h-[47rem] bg-black flex flex-col justify-center items-center text-white">
+        <div id="hero-banner" class="bg-[url('../../public/assets/img/homepage/hero-banner-backeats.png')] bg-center bg-no-repeat bg-cover w-screen h-[47rem] bg-black flex flex-col justify-center items-center text-white">
             <div id="hero-banner--titles" class="flex flex-col gap-6 mb-14">
                 <h1 class="text-center font-bold  text-5xl">
                     Vitesse et satisfaction assurées avec nos bornes de fast food !
@@ -45,7 +45,7 @@
         <div id="articles-container" class="w-screen h-[60rem] flex flex-col justify-around items-center mt-10 gap-6">
 
             <article class="w-[70%] h-[22rem] flex justify-between items-center">
-                <div id="article-image" class="bg-[url('../../public/assets/imageCss/bkscreens-backeats.png')] bg-cover bg-center w-[40rem] h-[22rem] rounded-xl"></div>
+                <div id="article-image" class="bg-[url('../../public/assets/img/homepage/bkscreens-backeats.png')] bg-cover bg-center w-[40rem] h-[22rem] rounded-xl"></div>
                 <div id="article-content-container--right" class="w-[30rem] flex flex-col gap-4">
                     <h3 id="article-title" class="text-4xl font-bold">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, suscipit?
@@ -71,15 +71,29 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ipsum qui accusantium ea! Nulla, quidem! Beatae ratione enim quibusdam sequi dolorum culpa quidem voluptas iusto aliquid quo provident quas autem, inventore nesciunt voluptatum obcaecati, temporibus asperiores pariatur odit. Consectetur repellendus, magni minima dignissimos aut impedit. Voluptates expedita incidunt, doloribus, est velit saepe at fuga quisquam provident officiis placeat corporis nihil!
                     </p>
                 </div>
-                <div id="article-image" class="bg-[url('../../public/assets/imageCss/mcdonalds-backeats.png')] bg-cover bg-center w-[40rem] h-[22rem] rounded-xl"></div>
+                <div id="article-image" class="bg-[url('../../public/assets/img/homepage/mcdonalds-backeats.png')] bg-cover bg-center w-[40rem] h-[22rem] rounded-xl"></div>
             </article>
         </div>
     </main>
-    <footer class="w-full h-[50rem] bg-lightblack flex flex-col justify-around items-center text-white">
-        <h2 class="text-center font-bold text-3xl">
+    <footer class="w-full pt-[10vh] bg-lightblack flex flex-col justify-around items-center text-white">
+        <h2 class="text-center font-bold text-4xl">
             Ils nous font confiance
         </h2>
-        <div>
+        <div class="mt-[10vh]">
+            <div id="article-image" class="bg-[url('../../public/assets/img/homepage/confiance.png')] bg-cover bg-center w-[90vw] h-[20vh] rounded-xl"></div>
+        </div>
+
+        <div class="mt-[10vh] w-full pl-[15vw]">
+            <div>
+                <h2 class=" font-bold text-4xl">
+                    Nous contacter
+                </h2>
+
+                
+
+            </div>
+
+
 
         </div>
 
