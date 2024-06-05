@@ -22,9 +22,16 @@ function diminuerTemps() {
         null;
     }else{
         temps--;
-        counter = temps
+        console.log(temps);
         if(temps === 0){
             modalAsk.style.display = 'flex';
+
+            setTimeout(  () => {
+                showStart = true;
+                temps = 0;
+                modalAsk.style.display = 'none';
+                startKiosk.style.display = 'flex';
+            }, 20000);
     
             modalAskYes.addEventListener('click', () => {
                 modalAsk.style.display = 'none';
