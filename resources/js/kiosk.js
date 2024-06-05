@@ -6,7 +6,7 @@ const modalAskNo = document.querySelector('#modalAskNo');
 const main = document.querySelector('main');
 
 let counter = 0;
-let temps = 5;
+let temps = 100;
 let showStart = true;
 
 startBtn.addEventListener('click', () => {
@@ -15,7 +15,7 @@ startBtn.addEventListener('click', () => {
 })
 main.addEventListener('click', () => {
     console.log('click');
-    temps = 5;
+    temps = 100;
 })
 function diminuerTemps() {
     if(showStart){
@@ -25,7 +25,6 @@ function diminuerTemps() {
         counter = temps
         if(temps === 0){
             modalAsk.style.display = 'flex';
-    
             modalAskYes.addEventListener('click', () => {
                 modalAsk.style.display = 'none';
             })
