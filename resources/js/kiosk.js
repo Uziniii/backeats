@@ -15,7 +15,7 @@ startBtn.addEventListener('click', () => {
 })
 main.addEventListener('click', () => {
     console.log('click');
-    temps = 100;
+    temps = 5;
 })
 function diminuerTemps() {
     if(showStart){
