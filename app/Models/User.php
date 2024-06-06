@@ -33,6 +33,12 @@ class User extends Authenticatable
         return $this->hasMany(Category::class);
     }
 
+
+    public function kioks()
+    {
+        return $this->hasOne(Kiosk::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

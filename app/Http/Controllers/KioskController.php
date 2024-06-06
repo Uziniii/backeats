@@ -36,3 +36,9 @@ class KioskController extends Controller
         }
     }
 }
+
+// $test = User::find(Auth::user()->id);
+
+// $kioksId = $test->kioks->id;
+
+// var_dump($kioksId);
