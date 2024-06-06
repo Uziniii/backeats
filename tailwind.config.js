@@ -18,6 +18,7 @@ export default {
               },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                montserrat: ['Montserrat', 'sans-serif'],
             },
             colors: {
                 lightblack: "#242424",

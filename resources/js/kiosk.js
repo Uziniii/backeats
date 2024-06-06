@@ -6,7 +6,7 @@ const modalAskNo = document.querySelector('#modalAskNo');
 const main = document.querySelector('main');
 
 let counter = 0;
-let temps = 5;
+let temps = 100;
 let showStart = true;
 
 startBtn.addEventListener('click', () => {
