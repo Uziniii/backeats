@@ -58,10 +58,12 @@
             </div>
 
             <div class="w-full h-[70%] flex flex-col items-center">
+                @foreach ($categories as $categorie)
                 <article class="flex flex-col items-center bg-[#AB8971] rounded-lg px-[2vw] py-[2vh] w-[25vw]">
-                    <img class="w-[170px] h-[130px]" src="{{asset("assets/img/kiosk/burger.png")}}" alt="image de l'article">
-                    <h2 class="text-[50px] text-white">Burger</h2>
+                    <img class="w-[170px] h-[130px]" src="{{ asset('storage/' . $categorie->image_path) }}" alt="image de l'article">
+                    <h2 class="text-[50px] text-white">{{ $categorie->name }}</h2>
                 </article>
+                @endforeach
             </div>
 
             <div class="w-full h-[10%] flex items-center justify-center">
