@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     use HasFactory;
+
+    use HasFactory;
+
+    protected $fillable = ['name', 'price', 'description', 'image'];
+
+    public function menus()
+    {
+        return $this->belongsToMany(Menu::class, 'menu_items');
+    }
 }

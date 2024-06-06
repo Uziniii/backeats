@@ -12,11 +12,9 @@ export default {
 
     theme: {
         extend: {
-            backgroundImage: {
-                'kioskBackground': "url('')",
-              },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                montserrat: ['Montserrat', 'sans-serif'],
             },
         },
     },
