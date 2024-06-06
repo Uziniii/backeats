@@ -1,0 +1,133 @@
+@ihttps: //accounts.google.com/speedbump/changepassword?hl=fr&marl=ABHrDGSguePy8rM8d7JheL1Z1F_SjenC283fkVE381Sms8JuQR66WWLcCBY-oMXC7C2QAlyxm3zuyk0wuAIcsc8lNDtripFwZsgrY3Uf1EA4sPJjMddbE7C1NjeusSMpavmwTEWC1To-EaViz4bx3hEAulPuD10mORiC8PP2SSoiYv7VoAadT6k&TL=AEzbmxx9vz_-bTwUJWt7eBhVAyL42HPT-ivzv-4n0ykAaJ_NksAUbZ6RqgUJ0RKimport url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+  * {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  list-style: none;
+  color: inherit;
+  font-family: "League Spartan", sans-serif;
+}
+
+
+body {
+  background-color: #f8f8ff;
+}
+
+
+header {
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+nav {
+  height: 15vh;
+  background-color: #242424;
+  padding: 0 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  gap: 2vw;
+  color: inherit;
+}
+
+.herobanner {
+  height: 85vh;
+  background: url('../img/herobanner.jpg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.herobanner__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+  text-align: center;
+  width: 70%;
+  margin-bottom: 7vh;
+  text-shadow: 1px 1px 1px black;
+}
+
+.herobanner__text h1 {
+  font-size: 54px;
+}
+
+.herobanner__text p {
+  font-size: 32px;
+}
+
+.herobanner__form-btn {
+  width: 17vw;
+  height: 6vh;
+
+}
+
+.herobanner__form-btn__btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #2BA6FF;
+  font-size: 24px;
+}
+
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
+  min-height: 100vh;
+  border-bottom: solid 2px red;
+  padding: 5vw 5vw;
+}
+
+.about-us__article {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.about-us__article:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+
+.about-us__article__img {
+  height: 380px;
+}
+
+.about-us__article__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.about-us__article__text__title {
+  font-size: 54px;
+}
+
+.about-us__article__text__place-info {
+  font-size: 24px;
+}
+
+.about-us__article__text__paragraph {
+  font-size: 24px;
+  line-height: 25px;
+}
+
+.partnership {
+  height: 100vh;
+  border: solid 2px red;
+  background: #242424;
+}
