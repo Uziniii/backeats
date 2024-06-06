@@ -1,4 +1,5 @@
 <head>
+<<<<<<< HEAD
     @vite(['resources/css/app.css', 'resources/js/kiosk.js'])
 </head>
 <body class="h-[100vh]">  

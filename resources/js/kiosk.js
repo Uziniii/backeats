@@ -6,7 +6,7 @@ const modalAskNo = document.querySelector('#modalAskNo');
 const main = document.querySelector('main');
 
 let counter = 0;
-let temps = 100;
+let temps = 5;
 let showStart = true;
 
 startBtn.addEventListener('click', () => {
@@ -15,7 +15,7 @@ startBtn.addEventListener('click', () => {
 })
 main.addEventListener('click', () => {
     console.log('click');
-    temps = 100;
+    temps = 5;
 })
 function diminuerTemps() {
     if(showStart){
