@@ -9,14 +9,10 @@ class Menu extends Model
 {
     use HasFactory;
 
-    protected $table = 'menus';
+    protected $fillable = ['name', 'price', 'image'];
 
-    // Ajoutez ici les champs qui peuvent être remplis
-    protected $fillable = [
-        'id',
-        'name',
-        'description',
-        'price',
-        'image_path',
-    ];
+    public function items()
+    {
+        return $this->belongsToMany(Item::class, 'menu_items');
+    }
 }
