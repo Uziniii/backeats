@@ -20,4 +20,19 @@ class KioskController extends Controller
             return redirect()->back()->with('error', 'ID non valide pour démarrer le kiosque.');
         }
     }
+
+    public function kiosk_select($token, $id)
+    {
+        $menu = Menu::find($id);
+    
+        if($menu) {
+            $items = $menu->items()->get();
+            
+            foreach($items as $item) {
+                echo $item;
+            }
+        } else {
+            return "Menu non trouvé.";
+        }
+    }
 }
