@@ -7,7 +7,7 @@ use App\Http\Controllers\MenuController;
 
 
 Route::get('/kiosk/{token}', [KioskController::class, 'start_kiosk'])->name('start_kiosk');
-Route::get('/kiosk/{token}', [KioskController::class, 'start_kiosk']);
+// Route::get('/kiosk/{token}', [KioskController::class, 'start_kiosk']);
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
