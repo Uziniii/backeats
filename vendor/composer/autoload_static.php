@@ -131,6 +131,7 @@ class ComposerStaticInit756f5253c46526afc4e386f5cb3329d3
             'League\\Flysystem\\' => 17,
             'League\\Config\\' => 14,
             'League\\CommonMark\\' => 18,
+            'Larswiegers\\LaravelMaps\\' => 24,
             'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
             'Laravel\\SerializableClosure\\' => 28,
@@ -151,6 +152,7 @@ class ComposerStaticInit756f5253c46526afc4e386f5cb3329d3
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
             'GrahamCampbell\\ResultType\\' => 26,
+            'Gajus\\Dindent\\' => 14,
         ),
         'F' => 
         array (
@@ -433,6 +435,10 @@ class ComposerStaticInit756f5253c46526afc4e386f5cb3329d3
         array (
             0 => __DIR__ . '/..' . '/league/commonmark/src',
         ),
+        'Larswiegers\\LaravelMaps\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/larswiegers/laravel-maps/src',
+        ),
         'Laravel\\Ui\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/ui/src',
@@ -490,6 +496,10 @@ class ComposerStaticInit756f5253c46526afc4e386f5cb3329d3
         'GrahamCampbell\\ResultType\\' => 
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
+        ),
+        'Gajus\\Dindent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gajus/dindent/src',
         ),
         'Fruitcake\\Cors\\' => 
         array (
@@ -1408,6 +1418,10 @@ class ComposerStaticInit756f5253c46526afc4e386f5cb3329d3
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/ValidGenerator.php',
         'Fruitcake\\Cors\\CorsService' => __DIR__ . '/..' . '/fruitcake/php-cors/src/CorsService.php',
         'Fruitcake\\Cors\\Exceptions\\InvalidOptionException' => __DIR__ . '/..' . '/fruitcake/php-cors/src/Exceptions/InvalidOptionException.php',
+        'Gajus\\Dindent\\Exception\\DindentException' => __DIR__ . '/..' . '/gajus/dindent/src/Exception/DindentException.php',
+        'Gajus\\Dindent\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/gajus/dindent/src/Exception/InvalidArgumentException.php',
+        'Gajus\\Dindent\\Exception\\RuntimeException' => __DIR__ . '/..' . '/gajus/dindent/src/Exception/RuntimeException.php',
+        'Gajus\\Dindent\\Indenter' => __DIR__ . '/..' . '/gajus/dindent/src/Indenter.php',
         'GrahamCampbell\\ResultType\\Error' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Error.php',
         'GrahamCampbell\\ResultType\\Result' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Result.php',
         'GrahamCampbell\\ResultType\\Success' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Success.php',
@@ -2932,6 +2946,11 @@ class ComposerStaticInit756f5253c46526afc4e386f5cb3329d3
         'Laravel\\Ui\\Presets\\Vue' => __DIR__ . '/..' . '/laravel/ui/src/Presets/Vue.php',
         'Laravel\\Ui\\UiCommand' => __DIR__ . '/..' . '/laravel/ui/src/UiCommand.php',
         'Laravel\\Ui\\UiServiceProvider' => __DIR__ . '/..' . '/laravel/ui/src/UiServiceProvider.php',
+        'Larswiegers\\LaravelMaps\\Components\\Google' => __DIR__ . '/..' . '/larswiegers/laravel-maps/src/Components/Google.php',
+        'Larswiegers\\LaravelMaps\\Components\\Leaflet' => __DIR__ . '/..' . '/larswiegers/laravel-maps/src/Components/Leaflet.php',
+        'Larswiegers\\LaravelMaps\\LaravelMaps' => __DIR__ . '/..' . '/larswiegers/laravel-maps/src/LaravelMaps.php',
+        'Larswiegers\\LaravelMaps\\LaravelMapsFacade' => __DIR__ . '/..' . '/larswiegers/laravel-maps/src/LaravelMapsFacade.php',
+        'Larswiegers\\LaravelMaps\\LaravelMapsServiceProvider' => __DIR__ . '/..' . '/larswiegers/laravel-maps/src/LaravelMapsServiceProvider.php',
         'League\\CommonMark\\CommonMarkConverter' => __DIR__ . '/..' . '/league/commonmark/src/CommonMarkConverter.php',
         'League\\CommonMark\\ConverterInterface' => __DIR__ . '/..' . '/league/commonmark/src/ConverterInterface.php',
         'League\\CommonMark\\Delimiter\\Delimiter' => __DIR__ . '/..' . '/league/commonmark/src/Delimiter/Delimiter.php',
