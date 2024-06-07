@@ -8,6 +8,8 @@ use App\Http\Controllers\MenuController;
 
 Route::get('/kiosk/{token}', [KioskController::class, 'start_kiosk'])->name('start_kiosk');
 Route::get('/kiosk/{token}/{id}', [KioskController::class, 'kiosk_select'])->name('kiosk_select');
+Route::get('/kiosk/{token}/category/{category_id}/menus', [KioskController::class, 'showMenusByCategory'])->name('kiosk_menus_by_category');
+
 
 
 

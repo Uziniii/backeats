@@ -42,7 +42,7 @@
                     <p class="text-[30px] text-[#805C3A]">Un large choix de burgers</p>
                 </div>
                 <div class="mt-[4vh] flex flex-wrap gap-7">
-                @foreach ($menus as $menu)
+                    @foreach ($menus as $menu)
                     <a href="{{ route('kiosk_select', ['token' => $token, 'id' => $menu->id]) }}">
                         <article class="flex flex-col items-center bg-[#FFFAEC] rounded-lg px-[2vw] py-[1vh] shadow-[rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;]">
                             <img class="w-[170px] h-[130px]" src="{{ asset('storage/' . $menu->image_path) }}" alt="image de l'article">
@@ -61,10 +61,12 @@
 
             <div class="w-full h-[70%] flex flex-col items-center">
                 @foreach ($categories as $categorie)
-                <article class="flex flex-col items-center bg-[#AB8971] rounded-lg px-[2vw] py-[2vh] w-[25vw]">
-                    <img class="w-[170px] h-[130px]" src="{{ asset('storage/' . $categorie->image_path) }}" alt="image de l'article">
-                    <h2 class="text-[50px] text-white">{{ $categorie->name }}</h2>
-                </article>
+                <a href="{{ route('kiosk_menus_by_category', ['token' => $token, 'category_id' => $categorie->id]) }}">
+                    <article>
+                        <img class="w-[170px] h-[130px]" src="{{ asset('storage/' . $categorie->image_path) }}" alt="image de l'article">
+                        <h2 class="text-[50px] text-white">{{ $categorie->name }}</h2>
+                    </article>
+                </a>
                 @endforeach
             </div>
 
