@@ -15,6 +15,11 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');  
 
+
 Route::get('/', [UserController::class, 'index'])->name('user.index');
 
-require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';  
+
+
+
+

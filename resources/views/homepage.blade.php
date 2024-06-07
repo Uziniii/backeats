@@ -1,5 +1,5 @@
 <head>
-    @vite(['resources/css/app.css', 'ressources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="overflow-x-hidden box-border p-0 m-0 scroll-smooth" >
     <header class="bg-lightblack w-screen h-[6rem] flex justify-center ">
@@ -79,12 +79,52 @@
         <h2 class="text-center font-bold text-4xl">
             Ils nous font confiance
         </h2>
-        <div class="mt-[10vh]">
-            <div id="article-image" class="bg-[url('../../public/assets/img/homepage/confiance.png')] bg-cover bg-center w-[90vw] h-[20vh] rounded-xl"></div>
-        </div>
 
-        <div class="mt-[10vh] w-full pl-[15vw]">
-            <div>
+@php
+        use Illuminate\Support\Facades\File;
+        $images = File::allFiles(public_path('/assets/img/homepage/logo_caroussel'));
+    @endphp
+<style>
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * {{ count($images) }}));
+    }
+}
+
+.animate-scroll {
+    animation: scroll {{ count($images) * 5 }}s linear infinite;
+}
+
+    </style>
+
+
+
+<div class="relative w-full overflow-hidden bg-white shadow-lg h-24">
+        <div class="absolute top-0 left-0 w-48 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
+        <div class="absolute top-0 right-0 w-48 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
+
+        <div class="flex animate-scroll w-[calc(250px * {{ count($images) }} * 2)]">
+            @foreach($images as $image)
+                <div class="w-64 h-24 flex-shrink-0 p-2">
+                    <img src="{{ asset('/assets/img/homepage/logo_caroussel/' . $image->getFilename()) }}" class="h-full w-full object-contain" alt="Image" />
+                </div>
+            @endforeach
+            @foreach($images as $image)
+                <div class="w-64 h-24 flex-shrink-0 p-2">
+                    <img src="{{ asset('/assets/img/homepage/logo_caroussel/' . $image->getFilename()) }}" class="h-full w-full object-contain" alt="Image" />
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+</body>
+
+</body>
+
+
                 <h2 class=" font-bold text-4xl">
                     Nous contacter
                 </h2>

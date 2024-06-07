@@ -23,7 +23,10 @@ export default {
                 lightblack: "#242424",
                 white : "#FFFFFF",
                 lightblue : "#2BA6FF",
-            },  
+            },
+            spacing: {
+                '10vh': '10vh',
+              },  
         },
     },
 
