@@ -12,10 +12,19 @@ export default {
 
     theme: {
         extend: {
+            backgroundImage: {
+                'kioskBackground': "url('')",
+                'herobanner' : "url('../../public/assets/imageCss/hero-banner-backeats.png",
+              },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 montserrat: ['Montserrat', 'sans-serif'],
             },
+            colors: {
+                lightblack: "#242424",
+                white : "#FFFFFF",
+                lightblue : "#2BA6FF",
+            },  
         },
     },
 
