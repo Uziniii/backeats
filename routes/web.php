@@ -11,8 +11,6 @@ Route::get('/kiosk/{token}/{id}', [KioskController::class, 'kiosk_select'])->nam
 Route::get('/kiosk/{token}/category/{category_id}/menus', [KioskController::class, 'showMenusByCategory'])->name('kiosk_menus_by_category');
 
 
-
-
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
