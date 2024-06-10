@@ -3,7 +3,7 @@
 </head>
 <body class="h-[100vh]">  
     <main style="background-image: url({{asset("/backgroundKiosk.png")}})" id="backgroundKiosk" class="bg-cover flex bg-repeat h-[100vh]">
-        <div id="startKiosk" style="background-image: url({{asset("/backgroundKiosk.png")}})" class="flex flex-col h-full  justify-center w-full absolute bg-cover flex bg-repeat">
+        <div id="startKiosk" style="background-image: url({{asset("/backgroundKiosk.png")}})" class="flex flex-col h-full  justify-center w-full absolute bg-cover flex bg-repeat hidden">
             <div class="h-[60%] w-full flex items-end justify-center">
                 <img class="w-[750px] h-[750px] mb-[3vh]" src="{{asset("assets/img/kiosk/Burger-king-logo-1 1.png")}}" alt="logo du restaurant">
             </div>
@@ -34,23 +34,6 @@
         </div>
 
         <div class="w-[70%] h-full p-[30px]">
-            <div class="w-full h-[100%]">
-                <div>
-                    <h1 class="font-bold text-[100px] text-[#805C3A]">Burgers</h1>
-                    <p class="text-[30px] text-[#805C3A]">Un large choix de burgers</p>
-                </div>
-                <div class="mt-[4vh] flex flex-wrap gap-7">
-                    @foreach ($menus as $menu)
-                    <a href="{{ route('kiosk_select', ['token' => $token, 'id' => $menu->id]) }}">
-                        <article class="flex flex-col items-center bg-[#FFFAEC] rounded-lg px-[2vw] py-[1vh] shadow-[rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;]">
-                            <img class="w-[170px] h-[130px]" src="{{ asset('storage/' . $menu->image_path) }}" alt="image de l'article">
-                            <h2 class="text-[30px] text-[#805C3A] font-medium">{{ $menu->name }}</h2>
-                            <p class="text-[30px] text-[#805C3A] font-medium">{{ $menu->price }}</p>
-                        </article>
-                    </a>
-                @endforeach
-                </div>
-            </div>
         </div>
         <div class="w-[30%] h-full bg-[#966C4D]  flex flex-col">
             <div class="w-full h-[10%]  flex items-center justify-center">
