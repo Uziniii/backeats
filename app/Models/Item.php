@@ -9,8 +9,6 @@ class Item extends Model
 {
     use HasFactory;
 
-    use HasFactory;
-
     protected $fillable = ['name', 'price', 'description', 'image'];
 
     public function menus()
