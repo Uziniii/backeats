@@ -8,7 +8,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 
-
 class User extends Authenticatable
 {
     use HasFactory;
@@ -62,7 +61,7 @@ class User extends Authenticatable
         ];
     }
 
-        /**
+    /**
      * Boot the model.
      */
     protected static function boot()
@@ -71,6 +70,8 @@ class User extends Authenticatable
 
         static::created(function ($user) {
             $user->generateAndSaveKioskToken();
+
+            Kiosk::create(["user_id" => $user->id]);
         });
     }
 
