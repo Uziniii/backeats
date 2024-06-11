@@ -9,6 +9,10 @@ class Kiosk extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "user_id"
+    ];
+
     public function categories()
     {
         return $this->hasMany(Category::class);
