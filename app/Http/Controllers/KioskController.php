@@ -23,28 +23,28 @@ class KioskController extends Controller
             return redirect()->back()->with('error', 'ID non valide pour démarrer le kiosque.');
         }
     }
-    public function showMenusByCategory($token, $category_id)
-{
-    $category = Category::find($category_id);
+    public function showMenusByCategory($token, $category_id)   
+    {
+        $category = Category::find($category_id);
 
-    if ($category) {
-        $menus = $category->menus;
-        $categories = $this->getCategory();
-        return view('kiosks.start_kiosk', ['token' => $token, 'menus' => $menus, 'categories' => $categories]);
-    } else {
-        return redirect()->back()->with('error', 'Catégorie non trouvée.');
-    }
-}
+        if ($category) {
+            $menus = $category->menus;
+            $categories = $this->getCategory();
+            return view('kiosks.start_kiosk', ['token' => $token, 'menus' => $menus, 'categories' => $categories]);
+        } else {
+            return redirect()->back()->with('error', 'Catégorie non trouvée.');
+        }
+    }  
     public function kiosk_select($token, $id)
     {
         $menu = Menu::find($id);
-    
+        $categories = $this->getCategory();
+
+        var_dump($menu);
+
         if($menu) {
             $items = $menu->items()->get();
-            
-            foreach($items as $item) {
-                echo $item;
-            }
+            return view('kiosks.show_menu', ['token' => $token, 'items' => $items, 'categories' => $categories] );
         } else {
             return redirect()->back()->with('error', 'Menu non trouvée.');
         }
