@@ -14,10 +14,10 @@ export default {
         extend: {
             backgroundImage: {
                 'kioskBackground': "url('')",
-                'herobanner' : "url('../../public/assets/imageCss/hero-banner-backeats.png",
+                'herobanner' : "url('../../public/assets/imageCss/hero-banner-backeats.png')",
               },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 lightblack: "#242424",
