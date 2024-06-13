@@ -18,11 +18,13 @@ export default {
               },
             fontFamily: {
                 sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+                montserrat: ['Montserrat', 'sans-serif'],
             },
             colors: {
                 lightblack: "#242424",
                 white : "#FFFFFF",
                 lightblue : "#2BA6FF",
+
             },
             spacing: {
                 '10vh': '10vh',

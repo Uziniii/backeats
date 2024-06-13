@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link href="resources/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@latest/dist/leaflet.js" crossorigin=""></script>
 </head>
-
-<body class="overflow-x-hidden box-border p-0 m-0 scroll-smooth">
-    <header class="bg-lightblack w-screen h-[6rem] flex justify-center">
+<body class="overflow-x-hidden box-border p-0 m-0 scroll-smooth" >
+    <header class="bg-lightblack w-screen h-[6rem] flex justify-center ">
         <div id="header-container--nav-logo" class="w-[90%] flex justify-between items-center">
             <div id="header-logo"></div>
             <nav>
-                <ul class="list-none text-white flex gap-6 text-lg">
+                <ul class="list-none text-white flex gap-6 text-lg ">
                     <li class="transition hover:cursor-pointer hover:scale-110">
-                        <p>Qui sommes nous ?</p>
+                        <p>
+                            Qui sommes nous ?
+                        </p>
                     </li>
                     <li class="transition hover:cursor-pointer hover:scale-110">
-                        <p>Nous contacter</p>
+                        <p>
+                            Nous contacter
+                        </p>
                     </li>
                     <li class="transition hover:cursor-pointer hover:scale-110">
-                        <p>Espace restaurateur</p>
+                        <p>
+                            Espace restaurateur
+                        </p>
                     </li>
                 </ul>
             </nav>

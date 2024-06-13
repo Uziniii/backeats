@@ -9,17 +9,22 @@ let counter = 0;
 let temps = 5;
 let showStart = true;
 
+
 startBtn.addEventListener('click', () => {
     startKiosk.style.display = 'none';
-    showStart = false;
-})
+    localStorage.setItem('status', 'start');
+});
+
 main.addEventListener('click', () => {
     console.log('click');
     temps = 5;
-})
+});
+
 function diminuerTemps() {
-    if(showStart){
-        null;
+    const status = localStorage.getItem('status');
+
+    if(status !== 'start'){
+        return null;
     }else{
         temps--;
         console.log(temps);
@@ -35,6 +40,12 @@ function diminuerTemps() {
                 temps = 0;
                 modalAsk.style.display = 'none';
                 startKiosk.style.display = 'flex';
+                localStorage.clear();
+                let currentUrl = window.location.href;
+                let parts = currentUrl.split('/');
+                let newUrl = `${parts[0]}//${parts[2]}/kiosk/${parts[4]}`;
+                window.location.href = newUrl;
+                
             })
     
         }

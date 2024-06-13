@@ -8,7 +8,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 
-
 class User extends Authenticatable
 {
     use HasFactory;
@@ -27,6 +26,17 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
+    }
+
+
+    public function kioks()
+    {
+        return $this->hasOne(Kiosk::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
@@ -51,7 +61,7 @@ class User extends Authenticatable
         ];
     }
 
-        /**
+    /**
      * Boot the model.
      */
     protected static function boot()
@@ -60,6 +70,8 @@ class User extends Authenticatable
 
         static::created(function ($user) {
             $user->generateAndSaveKioskToken();
+
+            Kiosk::create(["user_id" => $user->id]);
         });
     }
 
