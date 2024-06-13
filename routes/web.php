@@ -19,5 +19,7 @@ Route::view('profile', 'profile')
 
 Route::get('/', [UserController::class, 'index'])->name('user.index');
 
-require __DIR__.'/auth.php';
+Route::get('/', [UserController::class, 'index'])->name('user.index');
+
+require __DIR__.'/auth.php';  
 require __DIR__.'/dashboard.php';
