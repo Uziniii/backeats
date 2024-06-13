@@ -19,11 +19,6 @@
                             Nous contacter
                         </p>
                     </li>
-                    <li class="transition hover:cursor-pointer hover:scale-110">
-                        <p>
-                            Espace restaurateur
-                        </p>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -37,16 +32,15 @@
                 <h3 id="titles--sub" class="text-center font-light text-3xl">Réinventons ensemble le fast-food, une
                     bouchée à la fois</h3>
             </div>
-            <div class="w-60 h-35 flex items-center justify-center">
-                <span
-                    class="relative items-center justify-start inline-block px-7 py-3 overflow-hidden font-medium transition-all shadow bg-blue-600 bg-no-repeat rounded-lg hover:bg-slate-200 group cursor-pointer">
-                    <span
-                        class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all rounded-lg"></span>
-                    <span
-                        class="relative w-full text-left text-white text-lg transition-colors duration-200 ease-in-out group-hover:text-blue-600">Espace
-                        Restaurateur</span>
-                </span>
-            </div>
+            <form action="/register">
+                <button>
+                    <div class="w-64 h-35 flex items-center justify-center">
+                        <span href="" class="relative items-center justify-start inline-block px-7 py-3 overflow-hidden font-medium transition-all shadow bg-blue-600 bg-no-repeat rounded-lg hover:bg-slate-200 group cursor-pointer">
+                        <span class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all rounded-lg"></span>
+                        <span class="relative w-full text-left text-white text-lg transition-colors duration-200 ease-in-out group-hover:text-blue-600">Espace Restaurateur</span>
+                    </div>
+                </button>
+            </form>
         </div>
         <div id="articles-container" class="w-screen h-[60rem] flex flex-col justify-around items-center mt-10 gap-6">
             <article class="w-[70%] h-[22rem] flex justify-between items-center">
@@ -94,9 +88,9 @@
                 0% {
                     transform: translateX(0);
                 }
-
+                100% {
                 transform: translateX(calc(-250px * {{ count($images) }}));
-            }
+                }
             }
 
             .animate-scroll {
