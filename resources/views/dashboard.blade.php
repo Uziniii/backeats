@@ -10,9 +10,9 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
-                    {{ __("Welcome, ") . Auth::user()->first_name }}
+                    {{ __('Welcome, ') . Auth::user()->first_name }}
                     <a href="{{ route('start_kiosk', ['token' => Auth::user()->kiosk_token]) }}">
-                        {{ __("Lien vers la borne : ") . Auth::user()->kiosk_token }}
+                        {{ __('Lien vers la borne : ') . Auth::user()->kiosk_token }}
                     </a>
                 </div>
             </div>
