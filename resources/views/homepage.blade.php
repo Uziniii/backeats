@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -35,21 +36,16 @@
                     Réinventons ensemble le fast-food, une bouchée à la fois
                 </h3>
             </div>
-            <div class="w-60 h-35 flex items-center justify-center">
-                <span href=""
-                    class="relative items-center justify-start inline-block px-7 py-3 overflow-hidden font-medium transition-all shadow bg-blue-600 bg-no-repeat rounded-lg hover:bg-slate-200 group cursor-pointer">
-                    <span
-                        class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all rounded-lg"></span>
-                    <span
-                        class="relative w-full text-left text-white text-lg transition-colors duration-200 ease-in-out group-hover:text-blue-600">Espace
-                        Restaurateur</span>
-            </div>
             <form action="/register">
                 <button>
                     <div class="w-64 h-35 flex items-center justify-center">
-                        <span href="" class="relative items-center justify-start inline-block px-7 py-3 overflow-hidden font-medium transition-all shadow bg-blue-600 bg-no-repeat rounded-lg hover:bg-slate-200 group cursor-pointer">
-                        <span class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all rounded-lg"></span>
-                        <span class="relative w-full text-left text-white text-lg transition-colors duration-200 ease-in-out group-hover:text-blue-600">Espace Restaurateur</span>
+                        <span href=""
+                            class="relative items-center justify-start inline-block px-7 py-3 overflow-hidden font-medium transition-all shadow bg-blue-600 bg-no-repeat rounded-lg hover:bg-slate-200 group cursor-pointer">
+                            <span
+                                class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all rounded-lg"></span>
+                            <span
+                                class="relative w-full text-left text-white text-lg transition-colors duration-200 ease-in-out group-hover:text-blue-600">Espace
+                                Restaurateur</span>
                     </div>
                 </button>
             </form>
@@ -97,21 +93,32 @@
     <footer class="w-full pt-[10vh] bg-lightblack flex flex-col justify-around items-center text-white gap-10vh">
         <h2 class="text-center font-bold text-4xl">Ils nous font confiance</h2>
         @php
-            use Illuminate\Support\Facades\File;
-            $images = File::allFiles(public_path('/assets/img/homepage/logo_caroussel'));
+        use Illuminate\Support\Facades\File;
+        $images = File::allFiles(public_path('/assets/img/homepage/logo_caroussel'));
         @endphp
         <style>
             @keyframes scroll {
                 0% {
                     transform: translateX(0);
                 }
+
                 100% {
-                transform: translateX(calc(-250px * {{ count($images) }}));
+                    transform: translateX(calc(-250px * {
+                                    {
+                                    count($images)
+                                }
+                            }));
                 }
             }
 
             .animate-scroll {
-                animation: scroll {{ count($images) * 5 }}s linear infinite;
+                animation: scroll {
+                        {
+                        count($images) * 5
+                    }
+                }
+
+                s linear infinite;
             }
         </style>
         <div class="relative w-[90%] h-full overflow-hidden bg-lightblack h-24">
@@ -119,16 +126,16 @@
             <div class="absolute top-0 right-0 w-48 h-full bg-gradient-to-l from-lightblack to-transparent z-10"></div>
             <div class="flex animate-scroll w-[calc(250px * {{ count($images) }} * 2)]">
                 @foreach ($images as $image)
-                    <div class="w-64 h-28 flex-shrink-0 p-2">
-                        <img src="{{ asset('/assets/img/homepage/logo_caroussel/' . $image->getFilename()) }}"
-                            class="h-full w-full object-contain" alt="Image" />
-                    </div>
+                <div class="w-64 h-28 flex-shrink-0 p-2">
+                    <img src="{{ asset('/assets/img/homepage/logo_caroussel/' . $image->getFilename()) }}"
+                        class="h-full w-full object-contain" alt="Image" />
+                </div>
                 @endforeach
                 @foreach ($images as $image)
-                    <div class="w-64 h-28 flex-shrink-0 p-2">
-                        <img src="{{ asset('/assets/img/homepage/logo_caroussel/' . $image->getFilename()) }}"
-                            class="h-full w-full object-contain" alt="Image" />
-                    </div>
+                <div class="w-64 h-28 flex-shrink-0 p-2">
+                    <img src="{{ asset('/assets/img/homepage/logo_caroussel/' . $image->getFilename()) }}"
+                        class="h-full w-full object-contain" alt="Image" />
+                </div>
                 @endforeach
             </div>
             d
