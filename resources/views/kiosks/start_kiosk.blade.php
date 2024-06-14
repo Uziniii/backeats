@@ -72,7 +72,7 @@
                 <img class="mb-[20px]" src="{{asset("assets/img/kiosk/chevron_bot_kiosk.png")}}" alt="logo du restaurant">
             </div>
 
-            <div class="w-full h-[10%] flex items-center justify-center">
+            <div id="payButton" class="w-full h-[10%] flex items-center justify-center">
                 <a class="bg-[#805C3A] p-[30px] w-[85%] flex p-[10px] h-[70%] rounded-2xl">
                     <div class="w-[50%] h-full flex items-center justify-center">
                         <img src="{{asset("assets/img/kiosk/buy.png")}}" class="w-[70px] h-[70px]" alt="logo du restaurant">

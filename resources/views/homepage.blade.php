@@ -3,6 +3,7 @@
 
 <head>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 
 <body class="overflow-x-hidden box-border p-0 m-0 scroll-smooth">
@@ -25,7 +26,7 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main class="mb-[5rem]">
         <div id="hero-banner"
             class="bg-[url('../../public/assets/img/homepage/hero-banner-backeats.png')] bg-center bg-no-repeat bg-cover w-screen h-[47rem] bg-black flex flex-col justify-center items-center text-white">
             <div id="hero-banner--titles" class="flex flex-col gap-6 mb-14">
@@ -50,16 +51,16 @@
                 </button>
             </form>
         </div>
-        <div id="articles-container" class="w-screen h-[60rem] flex flex-col justify-around items-center mt-10 gap-6">
-            <article class="w-[70%] h-[22rem] flex justify-between items-center">
+        <div id="articles-container" class="w-screen h-[75rem] flex flex-col justify-around items-center mt-10 gap-6">
+            <article class="w-[70%] h-[22rem] flex justify-between items-center gap-x-10">
                 <div id="article-image"
                     class="bg-[url('../../public/assets/img/homepage/bkscreens-backeats.png')] bg-cover bg-center w-[40rem] h-[22rem] rounded-xl">
                 </div>
                 <div id="article-content-container--right" class="w-[30rem] flex flex-col gap-4">
-                    <h3 id="article-title" class="text-4xl font-bold">
+                    <h3 id="article-title" class="text-4xl font-bold md:text-2xl">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, suscipit?
                     </h3>
-                    <p id="article-sub" class="font-thin">
+                    <p id="article-sub" class="font-thin md:text-sm">
                         Lorem, ipsum dolor.
                     </p>
                     <p id="article-text">
@@ -72,11 +73,11 @@
                     </p>
                 </div>
             </article>
-            <article class="w-[70%] h-[22rem] flex flex-row justify-between items-center">
+            <article class="w-[70%] h-[22rem] flex flex-row justify-between items-center gap-x-10">
                 <div id="article-content-container--left" class="w-[30rem] flex flex-col gap-4">
-                    <h3 id="article-title" class="text-4xl font-bold">Lorem ipsum dolor sit amet consectetur adipisicing
+                    <h3 id="article-title" class="text-4xl font-bold md:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing
                         elit. Dignissimos, rem?</h3>
-                    <p id="article-sub" class="font-thin">Lorem, ipsum dolor.</p>
+                    <p id="article-sub" class="font-thin md:text-sm">Lorem, ipsum dolor.</p>
                     <p id="article-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ipsum qui
                         accusantium ea! Nulla, quidem! Beatae ratione enim quibusdam sequi dolorum culpa quidem voluptas
                         iusto aliquid quo provident quas autem, inventore nesciunt voluptatum obcaecati, temporibus
@@ -90,11 +91,11 @@
             </article>
         </div>
     </main>
-    <footer class="w-full pt-[10vh] bg-lightblack flex flex-col justify-around items-center text-white gap-10vh">
+    <footer class="w-full pb-[10vh] pt-[10vh] bg-lightblack flex flex-col justify-around items-center text-white gap-y-10">
         <h2 class="text-center font-bold text-4xl">Ils nous font confiance</h2>
         @php
-        use Illuminate\Support\Facades\File;
-        $images = File::allFiles(public_path('/assets/img/homepage/logo_caroussel'));
+            use Illuminate\Support\Facades\File;
+            $images = File::allFiles(public_path('/assets/img/homepage/logo_caroussel'));
         @endphp
         <style>
             @keyframes scroll {
@@ -103,48 +104,37 @@
                 }
 
                 100% {
-                    transform: translateX(calc(-250px * {
-                                    {
-                                    count($images)
-                                }
-                            }));
+                    transform: translateX(calc(-250px * {{ count($images) }}));
                 }
             }
 
             .animate-scroll {
-                animation: scroll {
-                        {
-                        count($images) * 5
-                    }
-                }
-
-                s linear infinite;
+                animation: scroll {{ count($images) * 5 }}s linear infinite;
             }
         </style>
-        <div class="relative w-[90%] h-full overflow-hidden bg-lightblack h-24">
+        <div class="relative w-[90%] h-full overflow-hidden bg-lightblack ">
             <div class="absolute top-0 left-0 w-48 h-full bg-gradient-to-r from-lightblack to-transparent z-10"></div>
             <div class="absolute top-0 right-0 w-48 h-full bg-gradient-to-l from-lightblack to-transparent z-10"></div>
             <div class="flex animate-scroll w-[calc(250px * {{ count($images) }} * 2)]">
                 @foreach ($images as $image)
-                <div class="w-64 h-28 flex-shrink-0 p-2">
-                    <img src="{{ asset('/assets/img/homepage/logo_caroussel/' . $image->getFilename()) }}"
-                        class="h-full w-full object-contain" alt="Image" />
-                </div>
-                @endforeach
+                    <div class="w-64 h-28 flex-shrink-0 p-2">
+                        <img src="{{ asset('/assets/img/homepage/logo_caroussel/' . $image->getFilename()) }}"
+                            class="h-full w-full object-contain" alt="Image" />
+                    </div>
+                @endforeach;
                 @foreach ($images as $image)
-                <div class="w-64 h-28 flex-shrink-0 p-2">
-                    <img src="{{ asset('/assets/img/homepage/logo_caroussel/' . $image->getFilename()) }}"
-                        class="h-full w-full object-contain" alt="Image" />
-                </div>
-                @endforeach
+                    <div class="w-64 h-28 flex-shrink-0 p-2">
+                        <img src="{{ asset('/assets/img/homepage/logo_caroussel/' . $image->getFilename())}}" class="h-full w-full object-contain" alt="Image" />
+                    </div>
+                @endforeach;
             </div>
-            d
         </div>
         <div class="flex justify-start w-[90%]">
             <p class="font-bold text-4xl">Nous contacter</p>
         </div>
         <div class="w-[90%] h-[70vh] flex flex-row-reverse justify-between">
-            <div id="mapid" style="height: 100%; width:50%;"></div>
+            <div id="mapid" class="h-[100%] w-[50%] max-w-[50%] overflow-hidden"></div>
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
             <script>
                 var mymap = L.map('mapid').setView([48.8566, 2.3522], 17);
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -156,23 +146,23 @@
                 <form class="rounded  w-full h-full flex flex-col justify-between">
                     <div class="mb-4 h-[10%]">
                         <input
-                            class="h-full shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            class="h-full shadow appearance-none rounded-md w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                             id="nom" type="text" placeholder="Nom">
                     </div>
                     <div class="mb-4 h-[10%]">
                         <input
-                            class="h-full shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            class="h-full shadow appearance-none rounded-md w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                             id="prenom" type="text" placeholder="Prénom">
                     </div>
                     <div class="mb-4 h-[10%]">
                         <input
-                            class="h-full shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                            class="h-full shadow appearance-none rounded-md w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                             id="email" type="email" placeholder="Adresse Email">
                     </div>
                     <div class="mb-4 flex-grow h-[60%]">
                         <textarea
-                            class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline h-full"
-                            id="message" placeholder="Message"></textarea>
+                            class="shadow appearance-none resize-none rounded-md w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline h-full"
+                            id="message" placeholder="Message" ></textarea>
                     </div>
                     <div class="h-[10%]">
                         <button
