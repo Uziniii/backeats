@@ -15,4 +15,10 @@ Route::middleware('auth')->group(function () {
 
     Volt::route('categories/create', 'pages.dashboard.create-categorie')
         ->name('create-categorie');
+
+    Volt::route('menus', 'pages.dashboard.menus')
+        ->name('menus');
+
+    Volt::route('menus/create', 'pages.dashboard.create-menu')
+        ->name('create-menu');
 });

@@ -33,10 +33,10 @@ new #[Layout('layouts.app')] class extends Component {
 <x-slot name="header">
     <div class="flex gap-2">
         <a class="font-semibold text-xl text-gray-800 leading-tight" href="{{ route('categories') }}" wire:navigate>
-            {{ __('Categories') }}
+            {{ __('Menus') }}
         </a>
         <span class="text-lg">/</span>
-        <span class="text-lg">Ajouter une catégorie</span>
+        <span class="text-lg">Créer un menu</span>
     </div>
 </x-slot>
 
