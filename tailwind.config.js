@@ -14,17 +14,22 @@ export default {
         extend: {
             backgroundImage: {
                 'kioskBackground': "url('')",
-                'herobanner' : "url('../../public/assets/imageCss/hero-banner-backeats.png",
+                'herobanner' : "url('../../public/assets/imageCss/hero-banner-backeats.png')",
               },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
                 montserrat: ['Montserrat', 'sans-serif'],
             },
             colors: {
                 lightblack: "#242424",
                 white : "#FFFFFF",
                 lightblue : "#2BA6FF",
-            },  
+
+            },
+            spacing: {
+                '10vh': '10vh',
+                '85vh': '85vh',
+              },  
         },
     },
 
