@@ -16,6 +16,9 @@ Route::middleware('auth')->group(function () {
     Volt::route('categories/create', 'pages.dashboard.create-categorie')
         ->name('create-categorie');
 
+    Volt::route('categorie/{id}', 'pages.dashboard.categorie')
+        ->name('categorie');
+
     Volt::route('menus', 'pages.dashboard.menus')
         ->name('menus');
 
