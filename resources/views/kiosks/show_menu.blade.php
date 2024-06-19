@@ -45,7 +45,7 @@
                 <a href="{{ route('kiosk_menus_by_category', ['token' => $token, 'category_id' => $categorie->id]) }}">
                     <article>
                         <img class="w-[170px] h-[130px]" src="{{ asset('storage/' . $categorie->image_path) }}" alt="image de l'article">
-                        <h2 class="text-[50px] text-white">{{ $categorie->name }}</h2>
+                        <h2 class="text-[30px] text-white">{{ $categorie->name }}</h2>
                     </article>
                 </a>
                 @endforeach
