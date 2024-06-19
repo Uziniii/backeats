@@ -73,7 +73,7 @@
                 @foreach ($categories as $categorie)
                 <a href="{{ route('kiosk_menus_by_category', ['token' => $token, 'category_id' => $categorie->id]) }}">
                     <article class="flex flex-col items-center">
-                        <img class="w-[170px] h-[130px]" src="{{ Storage::url($categorie->image) }}"
+                        <img class="w-[170px] h-[130px]" src="{{ Storage::url($categorie->photo) }}"
                             alt="image de l'article">
                         <h2 class="text-[30px] text-white">{{ $categorie->name }}</h2>
                     </article>
