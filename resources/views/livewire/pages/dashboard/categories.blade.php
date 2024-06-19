@@ -53,7 +53,7 @@ new #[Layout('layouts.app')] class () extends Component {
                 wire:click.stop="redirectToCategorie({{ $categorie->id }})">
                 <div class="flex items-center justify-between p-1">
                     <h1 class=" text-xl">{{$categorie['name']}}</h1>
-                    <button wire:click="delete({{ $categorie->id }})"
+                    <button wire:click.stop="delete({{ $categorie->id }})"
                         class="w-6 h-6 bg-red-600 rounded-md flex justify-center items-center">
                         <img src="{{URL::asset('assets/trash.png')}}" width="20px" class="h-5">
                     </button>
