@@ -40,10 +40,10 @@
                 <img class="mb-[20px]" src="{{asset("assets/img/kiosk/chevron_top_kiosk.png")}}" alt="logo du restaurant">
             </div>
 
-            <div class="w-full h-[70%] flex flex-col items-center">
+            <div class="w-full h-[70%] gap-[20px] flex flex-col items-center">
                 @foreach ($categories as $categorie)
                 <a href="{{ route('kiosk_menus_by_category', ['token' => $token, 'category_id' => $categorie->id]) }}">
-                    <article>
+                    <article class="flex flex-col items-center">
                         <img class="w-[170px] h-[130px]" src="{{ asset('storage/' . $categorie->image_path) }}" alt="image de l'article">
                         <h2 class="text-[30px] text-white">{{ $categorie->name }}</h2>
                     </article>
