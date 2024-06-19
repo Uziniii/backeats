@@ -34,6 +34,17 @@
         </div>
 
         <div class="w-[70%] h-full p-[30px]">
+            <div class="w-full h-full flex items-center flex-col justify-center">
+                <h1>Menu Details</h1>
+                <ul class="bg-[#805C3A] p-[50px] rounded-md">
+                    <li>ID: {{ $menu->id }}</li>
+                    <li>Name: {{ $menu->name }}</li>
+                    <li>Price: {{ $menu->price }}</li>
+                    <li>Image: <img src="{{ asset($menu->image) }}" alt="{{ $menu->name }}" /></li>
+                    <li>Created At: {{ $menu->created_at ?? 'N/A' }}</li>
+                    <li>Updated At: {{ $menu->updated_at ?? 'N/A' }}</li>
+                </ul>
+            </div>
         </div>
         <div class="w-[30%] h-full bg-[#966C4D]  flex flex-col">
             <div class="w-full h-[10%]  flex items-center justify-center">

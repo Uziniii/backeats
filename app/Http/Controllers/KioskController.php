@@ -40,11 +40,9 @@ class KioskController extends Controller
         $menu = Menu::find($id);
         $categories = $this->getCategory();
 
-        var_dump($menu);
-
         if ($menu) {
             $items = $menu->items()->get();
-            return view('kiosks.show_menu', ['token' => $token, 'items' => $items, 'categories' => $categories]);
+            return view('kiosks.show_menu', ['token' => $token, 'items' => $items, 'categories' => $categories, 'menu' => $menu]);
         } else {
             return redirect()->back()->with('error', 'Menu non trouvée.');
         }

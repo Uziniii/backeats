@@ -10,6 +10,12 @@ let temps = 25;
 let showStart = true;
 
 
+const statusStart = localStorage.getItem('status');
+
+if(statusStart){
+    startKiosk.style.display = 'none';
+}
+
 startBtn.addEventListener('click', () => {
     startKiosk.style.display = 'none';
     localStorage.setItem('status', 'start');
