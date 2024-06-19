@@ -14,7 +14,7 @@
 
             <div class="h-[40%] flex items-end justify-center w-full">
                 <a id="startBtn"
-                    class=" bg-[#966C4D]  text-white mb-[5vh] pt-[80px] pb-[80px] w-[85vw] text-center rounded-3xl text-[90px] font-bold color-white">Commencer</a>
+                    class="bg-[#966C4D] text-white mb-[5vh] pt-[80px] pb-[80px] w-[85vw] text-center rounded-3xl text-[90px] font-bold color-white">Commencer</a>
             </div>
         </div>
 
